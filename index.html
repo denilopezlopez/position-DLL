@@ -43,13 +43,11 @@ d3.select("#start").on("click", function() {
 	.attr("x", 250); // New Position
 });
 
-// Set up the reset button to move it back to 50,50 
-
-	d3.select("#reset").on("click", function() { 
-		rectangle
-		.transition()
-		.attr("x", 50); // Old Position
-	});
+d3.select("#reset").on("click", function() { 
+	rectangle
+	.transition()
+	.attr("x", 50); // Old Position
+});
 	
 </script>
 </body>
