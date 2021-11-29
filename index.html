@@ -38,13 +38,13 @@ var rectangle = svgContainer.append("rect")
 	.attr("height", 50);
 	
 d3.select("#start”).on("click", function() {
-rectangle
+	rectangle
 	.transition()
 	.attr(“x”, 250); // New Position
 });
 
 d3.select(“#reset”).on("click", function() {
-rectangle
+	rectangle
 	.transition()
 	.attr(“x”, 50); // Old Position
 });
