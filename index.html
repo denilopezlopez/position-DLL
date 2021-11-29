@@ -41,16 +41,21 @@ d3.select("#start").on("click", function() {
 	rectangle
 	.transition()
 	.attr("x", 250) // New Position
-	.attr("opacity", 0.5)
-	.attr("fill", 'blue');
+	.attr("opacity", 0.5) // New Opacity
+	.attr("fill", 'blue') // New Color (Hex, RGB, or Web Safe)
+	.attr("width", 100) // New Width
+	.attr("height", 100) // New Height 
+	.delay(100);
 });
 
 d3.select("#reset").on("click", function() { 
 	rectangle
-	.transition()
+	.transition() 
 	.attr("x", 50) // Old Position
-	.attr("opacity", 1)
-	.attr("fill", 'orange');
+	.attr("opacity", 1) // New Opacity
+	.attr("fill", 'orange') // New Color (Hex, RGB, or Web Safe)
+	.attr("width", 50) // New Width
+	.attr("height", 50); // New Height
 });
 	
 </script>
