@@ -45,42 +45,10 @@ d3.select("#start").on("click", function() {
 
 // Set up the reset button to move it back to 50,50 
 
-d3.select("#reset").on("click", function() { 
-	rectangle
-	.transition()
-	.attr("x", 50); // Old Position
-});
-
-d3.select("#start2").on("click", function() { 
-	rectangle
-	.transition() 
-	.attr("x", 250) 
-	.attr("opacity", 0.5)
-});
-	
-d3.select("#reset2").on("click", function() { 
-	rectangle
-	.transition()
-	.attr("x", 50) //old position 
-	.attr("y", 50)
-	.attr("opacity", 1) 
-});
-
-d3.select("#start3").on("click", function() { 
-	rectangle
-	.transition()
-	.attr("x", 250)
-	.attr("opacity", 0.5)
-	.attr("fill", 'blue'); // ALL OF OUR TRANSITIONS WILL GO HERE!
-});
-
-	d3.select("#reset3").on("click", function() { 
+	d3.select("#reset").on("click", function() { 
 		rectangle
 		.transition()
-		.attr("x", 50) //old position 
-		.attr("y", 50)
-		.attr("opacity", 1)
-		.attr("fill", 'green'); 
+		.attr("x", 50); // Old Position
 	});
 	
 </script>
