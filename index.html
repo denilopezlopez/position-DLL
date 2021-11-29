@@ -41,14 +41,16 @@ d3.select("#start").on("click", function() {
 	rectangle
 	.transition()
 	.attr("x", 250) // New Position
-	.attr("opacity", 0.5);
+	.attr("opacity", 0.5)
+	.attr("fill", 'blue');
 });
 
 d3.select("#reset").on("click", function() { 
 	rectangle
 	.transition()
 	.attr("x", 50) // Old Position
-	.attr("opacity", 1);
+	.attr("opacity", 1)
+	.attr("fill", 'orange');
 });
 	
 </script>
