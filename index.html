@@ -45,7 +45,9 @@ d3.select("#start").on("click", function() {
 	.attr("fill", 'blue') // New Color (Hex, RGB, or Web Safe)
 	.attr("width", 100) // New Width
 	.attr("height", 100) // New Height 
-	.delay(100);
+	.delay(500)
+	.duration(2500) // Set Duration of 2500ms (2.5 seconds)
+	.ease(d3.easeBounce);
 });
 
 d3.select("#reset").on("click", function() { 
@@ -55,7 +57,9 @@ d3.select("#reset").on("click", function() {
 	.attr("opacity", 1) // New Opacity
 	.attr("fill", 'orange') // New Color (Hex, RGB, or Web Safe)
 	.attr("width", 50) // New Width
-	.attr("height", 50); // New Height
+	.attr("height", 50) // New Height
+	.duration(2500) // Set Duration of 2500ms (2.5 seconds)
+	.ease(d3.easeBounce);
 });
 	
 </script>
