@@ -47,19 +47,27 @@ d3.select("#start").on("click", function() {
 	.attr("height", 100) // New Height 
 	.delay(500)
 	.duration(2500) // Set Duration of 2500ms (2.5 seconds)
-	.ease(d3.easeBounce);
+	.ease(d3.easeBounce)
+	.on("end",function() { // on end of transition...
+		d3.select(this)
+			.transition() // second transition
+				.attr("x", 150) // second x
+				.attr("width", 50) // second width
+				.attr("height", 50) // second height
+				.attr("opacity", 1) // second opacity
+				.attr("fill", "orange") // second color
+				.delay(500) // second delay
+				.duration(2500) // second time
+				.ease(d3.easeBounce); // second ease
+		});
 });
-
-d3.select("#reset").on("click", function() { 
+	
+d3.select("#reset7").on("click", function() {
 	rectangle
-	.transition() 
-	.attr("x", 50) // Old Position
-	.attr("opacity", 1) // New Opacity
-	.attr("fill", 'orange') // New Color (Hex, RGB, or Web Safe)
-	.attr("width", 50) // New Width
-	.attr("height", 50) // New Height
-	.duration(2500) // Set Duration of 2500ms (2.5 seconds)
-	.ease(d3.easeBounce);
+	.transition()
+	.attr("x", 50)
+	.attr("y", 50); // New Position
+	});
 });
 	
 </script>
