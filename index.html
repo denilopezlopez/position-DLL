@@ -40,13 +40,15 @@ var rectangle = svgContainer.append("rect")
 d3.select("#start").on("click", function() { 
 	rectangle
 	.transition()
-	.attr("x", 250); // New Position
+	.attr("x", 250) // New Position
+	.attr("opacity", 0.5);
 });
 
 d3.select("#reset").on("click", function() { 
 	rectangle
 	.transition()
-	.attr("x", 50); // Old Position
+	.attr("x", 50) // Old Position
+	.attr("opacity", 1);
 });
 	
 </script>
