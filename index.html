@@ -16,12 +16,12 @@
 
 	</div>
 <script type="text/javascript">
-	
+
 // Width and height of the SVG object 
 let w = 350;
 let h = 175;
 
-//Make an SVG Container
+// Make an SVG Container
 var svgContainer = d3.select("div#main")
 	.append("svg")
 	.attr("width", 400) 
@@ -36,17 +36,19 @@ var rectangle = svgContainer.append("rect")
 	.attr("y", 50) 
 	.attr("width", 50) 
 	.attr("height", 50);
-	
-d3.select("#start”).on("click", function() {
+
+d3.select("#start").on("click", function() { 
 	rectangle
 	.transition()
-	.attr(“x”, 250); // New Position
+	.attr("x", 250); // New Position
 });
 
-d3.select(“#reset”).on("click", function() {
+// Set up the reset button to move it back to 50,50 
+
+d3.select("#reset").on("click", function() { 
 	rectangle
 	.transition()
-	.attr(“x”, 50); // Old Position
+	.attr("x", 50); // Old Position
 });
 
 </script>
