@@ -12,44 +12,42 @@
 <body>
 	<button id="start">Transition</button> 
 	<button id="reset">Reset</button>
-	
 	<div id="main">
 
 	</div>
-	
 <script type="text/javascript">
 	
-	// Width and height of the SVG object
-	let w = 350;
-	let h = 175;
+// Width and height of the SVG object 
+let w = 350;
+let h = 175;
 
-	// Make an SVG Container
-	var svgContainer = d3.select("div#main")
-		.append("svg")
-		.attr("width", 400)
-		.attr("height", 200)
-		.style("border-color", "black")
-		.style("border-style", "solid")
-		.style("border-width", "1px");
-	
-	// Draw the Rectangle
-	var rectangle = svgContainer.append("rect")
-		.attr("x", 50)
-		.attr("y", 50)
-		.attr("width", 50)
-		.attr("height", 50);
-	
-	d3.select("#start”).on("click", function() {
-	rectangle
-		.transition()
-		.attr(“x”, 250); // New Position
-	});
+//Make an SVG Container
+var svgContainer = d3.select("div#main")
+	.append("svg")
+	.attr("width", 400) 
+	.attr("height", 200) 
+	.style("border-color", "black") 
+	.style("border-style", "solid")
+	.style("border-width", "1px");
 
-	d3.select(“#reset”).on("click", function() {
-	rectangle
-		.transition()
-		.attr(“x”, 50); // Old Position
-	});
+// Draw the Rectangle
+var rectangle = svgContainer.append("rect")
+	.attr("x", 50) 
+	.attr("y", 50) 
+	.attr("width", 50) 
+	.attr("height", 50);
+	
+d3.select("#start”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 250); // New Position
+});
+
+d3.select(“#reset”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 50); // Old Position
+});
 
 </script>
 </body>
